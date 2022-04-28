@@ -7,6 +7,10 @@ const schema = new mongoose.Schema({
     type: String,
     trim: true
   },
+  age: {
+    type: Number,
+    trim: true
+  },
   email: {
     type: String,
     required: true,
@@ -16,6 +20,7 @@ const schema = new mongoose.Schema({
   passwordHashAndSalt: {
     type: String
   }
+  
 });
 
 const User = mongoose.model('User', schema);
