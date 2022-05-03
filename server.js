@@ -5,6 +5,7 @@ dotenv.config();
 
 const debug = require('debug')('poke-project:server');
 const app = require('./app');
+const axios = require('axios');
 const mongoose = require('mongoose');
 
 const PORT = Number(process.env.PORT, 10);
@@ -57,6 +58,17 @@ const initiate = () => {
   server.on('error', (error) => onError(error));
   server.on('listening', () => onListening(server));
 };
+
+axios
+  .get('https://api.pokemontcg.io/v2/cards?q=name:gardevoir')
+  .then((response) => {
+    const data = response.data;
+    console.log(data);
+    const cards = response.data.Search;
+  })
+  .catch((error) => {
+    console.log('there was something wrong with the api');
+  });
 
 mongoose
   .connect(MONGODB_URI)
