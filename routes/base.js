@@ -25,9 +25,15 @@ router.get('/results', async (req, res) => {
       }
     );
     const cards = result.data.data;
-    res.render('results', { cards });
+    const count = result.data.count;
+    if (count === 0) {
+      res.render('private'); // this must be wrong input
+    } else {
+      res.render('results', { cards });
+    }
   } catch (error) {
     console.error(error);
   }
 });
+
 module.exports = router;
