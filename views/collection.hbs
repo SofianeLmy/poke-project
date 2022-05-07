@@ -1,0 +1,15 @@
+<form action="/results">
+  <input placeholder="Pikachu" name="term" />
+  <button>search</button>
+</form>
+
+{{!-- <span><strong>Name</strong>: {{user.name}}</span>
+<br />
+<span><strong>Email</strong>: {{user.email}}</span> --}}
+
+{{!-- <p>{{cardName}}</p> --}}
+{{#each cards}}
+  <h3>{{cardName}}</h3>
+  <small>{{cardValue}}</small>
+  <img src="{{cardImage}}" alt="Image" class="card-image" />
+{{/each}}
