@@ -4,6 +4,7 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 const routeGuard = require('./../middleware/route-guard');
+const Card = require('./../models/card');
 
 router.get('/', (req, res, next) => {
   res.render('home', { title: 'Hello World!' });
@@ -34,6 +35,25 @@ router.get('/results', async (req, res) => {
   } catch (error) {
     console.error(error);
   }
+});
+
+router.post('/add-card', (req, res, next) => {
+  const cardName = req.body.cardName;
+  const cardImage = req.body.cardImage;
+  const cardValue = req.body.cardValue;
+  const creator = req.user._id;
+  const card = {
+    cardName,
+    cardImage,
+    cardValue,
+    creator
+  };
+  Card.create(card)
+    .then((cardData) => {
+      console.log(cardData);
+      res.redirect('private');
+    })
+    .catch((error) => next(error));
 });
 
 module.exports = router;

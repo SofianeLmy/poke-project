@@ -100,4 +100,12 @@ label {
   float: left;
 }
 
+.hidden {
+  display: none;
+}
+
+.card-image {
+  width: 300px;
+}
+
 /*# sourceMappingURL=style.css.map */

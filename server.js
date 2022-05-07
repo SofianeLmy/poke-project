@@ -60,18 +60,6 @@ const initiate = () => {
   server.on('listening', () => onListening(server));
 };
 
-// const term = request.query.term;
-// axios
-//   .get('https://api.pokemontcg.io/v2/cards?q=name:' + term)
-//   .then((response) => {
-//     const data = response.data;
-//     console.log(data);
-//     const cards = response.data.Search;
-//   })
-//   .catch((error) => {
-//     console.log('there was something wrong with the api');
-//   });
-
 mongoose
   .connect(MONGODB_URI)
   .then(() => {

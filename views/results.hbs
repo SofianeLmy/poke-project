@@ -1,8 +1,23 @@
 {{#each cards}}
-  <h3>{{name}}</h3>
-  <img src="{{images.small}}" alt="Image" />
-  <small>{{cardmarket.prices.avg1}}</small>
-{{/each}}
-{{#each count}}
-  <p>wrong input</p>
+
+  <form action="/add-card" method="POST">
+    <h3>{{name}}</h3>
+    <small>{{cardmarket.prices.avg1}}</small>
+    <img src="{{images.small}}" alt="Image" class="card-image" />
+    <input type="text" name="cardName" class="hidden" value="{{name}}" />
+    <input
+      type="text"
+      name="cardValue"
+      class="hidden"
+      value="{{cardmarket.prices.avg1}}"
+    />
+    <input
+      type="text"
+      name="cardImage"
+      class="hidden"
+      value="{{images.small}}"
+    />
+    <button>add to MongoDB</button>
+  </form>
+
 {{/each}}
