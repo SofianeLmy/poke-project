@@ -57,18 +57,14 @@ router.post('/add-card', (req, res, next) => {
 });
 
 router.get('/collection', routeGuard, (req, res, next) => {
-  Card.find()
-    .then((allTheCardsFromDB) => {
-      // -> allTheBooksFromDB is a placeholder, it can be any word
-      console.log('Retrieved cards from DB:', allTheCardsFromDB);
+  const userId = req.user._id;
+  Card.find({ creator: userId })
 
-      // we call the render method after we obtain the books data from the database -> allTheBooksFromDB
-      res.render('collection', { cards: allTheCardsFromDB }); // pass `allTheBooksFromDB` to the view (as a variable books to be used in the HBS)
+    .then((allTheCardsFromDB) => {
+      res.render('collection', { cards: allTheCardsFromDB });
     })
     .catch((error) => {
-      console.log('Error while getting the books from the DB: ', error);
-
-      // Call the error-middleware to display the error page to the user
+      console.log('Error while getting the cards from the DB: ', error);
       next(error);
     });
 });

@@ -3,13 +3,13 @@
   <button>search</button>
 </form>
 
-{{!-- <span><strong>Name</strong>: {{user.name}}</span>
-<br />
-<span><strong>Email</strong>: {{user.email}}</span> --}}
-
-{{!-- <p>{{cardName}}</p> --}}
 {{#each cards}}
+  {{!-- {{#if userIsOwner}} --}}
+  
+  <p>{{card.creator}}</p>
   <h3>{{cardName}}</h3>
   <small>{{cardValue}}</small>
   <img src="{{cardImage}}" alt="Image" class="card-image" />
+  {{!-- {{/if}} --}}
+
 {{/each}}
