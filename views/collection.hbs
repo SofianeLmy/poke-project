@@ -10,7 +10,13 @@
     <img src="{{cardImage}}" alt="Image" class="card-image" />
   </div>
   <form action="/collection/{{_id}}/edit" method="POST">
-    <input type="number" name="cardAmount" id="" value="{{cardAmount}}" />
+    <input
+      type="number"
+      min="1"
+      name="cardAmount"
+      id=""
+      value="{{cardAmount}}"
+    />
     <button>update</button>
   </form>
   <form action="/collection/{{_id}}/delete" method="POST">
