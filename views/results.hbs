@@ -1,24 +1,27 @@
-{{#each cards}}
+<div class="card-container">
+  {{#each cards}}
+    <div class="card">
+      <form action="/add-card" method="POST">
 
-  <form action="/add-card" method="POST">
-    <h3>{{name}}</h3>
-    <small>{{cardmarket.prices.avg1}}</small>
-    <img src="{{images.small}}" alt="Image" class="card-image" />
-    <input type="text" name="cardName" class="hidden" value="{{name}}" />
-    <input
-      type="text"
-      name="cardValue"
-      class="hidden"
-      value="{{cardmarket.prices.avg1}}"
-    />
-    <input
-      type="text"
-      name="cardImage"
-      class="hidden"
-      value="{{images.small}}"
-    />
-    <input type="text" name="cardAmount" class="hidden" value="1" />
-    <button>add to MongoDB</button>
-  </form>
-
-{{/each}}
+        <img src="{{images.small}}" alt="Image" />
+        <small>${{cardmarket.prices.avg1}}</small>
+        <strong class="card-name">{{name}}</strong>
+        <input type="text" name="cardName" class="hidden" value="{{name}}" />
+        <input
+          type="text"
+          name="cardValue"
+          class="hidden"
+          value="{{cardmarket.prices.avg1}}"
+        />
+        <input
+          type="text"
+          name="cardImage"
+          class="hidden"
+          value="{{images.small}}"
+        />
+        <input type="text" name="cardAmount" class="hidden" value="1" />
+        <button>+</button>
+      </form>
+    </div>
+  {{/each}}
+</div>

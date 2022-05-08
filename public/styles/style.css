@@ -100,12 +100,93 @@ label {
   float: left;
 }
 
-.hidden {
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-container .card {
+  position: relative;
+  width: calc(20% - 10px);
+  background-color: #f4f4f4;
+  border: solid 1px lightgray;
+  padding: 10px;
+  margin: 5px;
+}
+
+.card-container .card .card-name {
+  white-space: nowrap;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-container .card button {
+  all: unset;
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  padding: 10px;
+  line-height: 1;
+  cursor: pointer;
+  background-color: lightgreen;
+}
+
+.card-container .card .hidden {
   display: none;
 }
 
-.card-image {
-  width: 300px;
+.collection-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.collection-container .card {
+  position: relative;
+  width: calc(20% - 10px);
+  background-color: #f4f4f4;
+  border: solid 1px lightgray;
+  padding: 10px;
+  margin: 5px;
+}
+
+.collection-container .card .card-name {
+  white-space: nowrap;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.collection-container .card .update {
+  all: unset;
+  top: auto;
+  left: 0;
+  bottom: 0;
+  right: auto;
+  position: absolute;
+  padding: 10px;
+  line-height: 1;
+  cursor: pointer;
+  background-color: lightgreen;
+}
+
+.collection-container .card .delete {
+  all: unset;
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  padding: 10px;
+  line-height: 1;
+  cursor: pointer;
+  background-color: lightcoral;
+}
+
+.collection-container .card .hidden {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
