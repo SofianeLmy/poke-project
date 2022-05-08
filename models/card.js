@@ -15,6 +15,10 @@ const cardSchema = new mongoose.Schema({
     type: Number,
     trim: true
   },
+  cardAmount: {
+    type: Number,
+    trim: true
+  },
   creator: {
     type: mongoose.Types.ObjectId,
     required: true,

@@ -37,38 +37,53 @@ router.get('/results', async (req, res) => {
   }
 });
 
-router.post('/add-card', (req, res, next) => {
+router.post('/add-card', routeGuard, (req, res, next) => {
   const cardName = req.body.cardName;
   const cardImage = req.body.cardImage;
   const cardValue = req.body.cardValue;
+  const cardAmount = req.body.cardAmount;
   const creator = req.user._id;
   const card = {
     cardName,
     cardImage,
     cardValue,
+    cardAmount,
     creator
   };
   Card.create(card)
-    .then((cardData) => {
-      console.log(cardData);
+    .then((card) => {
+      console.log(card);
       res.redirect('collection');
     })
     .catch((error) => next(error));
 });
 
-router.get('/collection', routeGuard, (req, res, next) => {
-  Card.find()
-    .then((allTheCardsFromDB) => {
-      // -> allTheBooksFromDB is a placeholder, it can be any word
-      console.log('Retrieved cards from DB:', allTheCardsFromDB);
+router.post('/collection/:cardId/delete', (req, res, next) => {
+  const { cardId } = req.params;
 
-      // we call the render method after we obtain the books data from the database -> allTheBooksFromDB
-      res.render('collection', { cards: allTheCardsFromDB }); // pass `allTheBooksFromDB` to the view (as a variable books to be used in the HBS)
+  Card.findByIdAndDelete(cardId)
+    .then(() => res.redirect('/collection'))
+    .catch((error) => next(error));
+});
+
+router.post('/collection/:cardId/edit', (req, res, next) => {
+  const { cardId } = req.params;
+  const { cardAmount } = req.body;
+
+  Card.findByIdAndUpdate(cardId, { cardAmount }, { new: true })
+    .then(() => res.redirect('/collection')) // go to the details page to see the updates
+    .catch((error) => next(error));
+});
+
+router.get('/collection', routeGuard, (req, res, next) => {
+  const userId = req.user._id;
+  Card.find({ creator: userId })
+
+    .then((allTheCardsFromDB) => {
+      res.render('collection', { cards: allTheCardsFromDB });
     })
     .catch((error) => {
-      console.log('Error while getting the books from the DB: ', error);
-
-      // Call the error-middleware to display the error page to the user
+      console.log('Error while getting the cards from the DB: ', error);
       next(error);
     });
 });
