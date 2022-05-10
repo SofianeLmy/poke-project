@@ -67,40 +67,4 @@ router.post('/sign-out', (req, res, next) => {
   res.redirect('/');
 });
 
-// router.get('/results', async (req, res, next) => {
-//   res.render('results');
-// });
-
-// router.post('/results', (req, res, next) => {
-//   const { user, cardName, cardValue, cardImage } = req.body;
-//   const creator = req.user._id;
-//   Card.create({ user, cardName, cardValue, cardImage, creator })
-//     .then(() => res.redirect('private'))
-//     .catch((error) => next(error));
-// });
-
-// router.post('/add-card', (req, res, next) => {
-//   console.log('hey hallo here i am');
-// });
-
-// router.post('/add-card', (req, res, next) => {
-//   console.log('copy test');
-//   const cardName = req.body.cardName;
-//   const cardImage = req.body.cardImage;
-//   const cardValue = req.body.cardValue;
-//   const creator = req.user._id;
-//   const card = {
-//     cardName,
-//     cardImage,
-//     cardValue,
-//     creator
-//   };
-//   Card.create(card)
-//     .then((cardData) => {
-//       console.log(cardData);
-//       res.redirect('private');
-//     })
-//     .catch((error) => next(error));
-// });
-
 module.exports = router;

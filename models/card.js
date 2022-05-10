@@ -19,6 +19,10 @@ const cardSchema = new mongoose.Schema({
     type: Number,
     trim: true
   },
+  cardApiId: {
+    type: String,
+    trim: true
+  },
   creator: {
     type: mongoose.Types.ObjectId,
     required: true,

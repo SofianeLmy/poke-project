@@ -1,11 +1,12 @@
 <div class="card-container">
-  {{#each cards}}
+  {{#each cardsToDisplay}}
     <div class="card">
       <form action="/add-card" method="POST">
 
         <img src="{{images.small}}" alt="Image" />
         <small>${{cardmarket.prices.avg1}}</small>
         <strong class="card-name">{{name}}</strong>
+        {{!-- <strong class="card-name">{{id}}</strong> --}}
         <input type="text" name="cardName" class="hidden" value="{{name}}" />
         <input
           type="text"
@@ -19,6 +20,7 @@
           class="hidden"
           value="{{images.small}}"
         />
+        <input type="text" name="cardApiId" class="hidden" value="{{id}}" />
         <input type="text" name="cardAmount" class="hidden" value="1" />
         <button>+</button>
       </form>

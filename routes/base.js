@@ -25,29 +25,49 @@ router.get('/results', async (req, res) => {
         }
       }
     );
-    const cards = result.data.data;
+    const cardsFromAPI = result.data.data;
     const count = result.data.count;
-    if (count === 0) {
-      res.render('private'); // this must be wrong input
-    } else {
-      res.render('results', { cards });
-    }
+    // const cardId = req.body.cardApiId;
+    //console.log(cardsFromAPI);
+    Card.find({ creator: req.user._id })
+      .then((cardsFromDB) => {
+        console.log(cardsFromDB);
+        const arrayOfIds = cardsFromDB.map((eachElement) =>
+          String(eachElement.cardApiId)
+        );
+        const cardsToDisplay = cardsFromAPI.filter(
+          (eachCard) => !arrayOfIds.includes(eachCard.id)
+        );
+        console.log('CARDS', cardsToDisplay);
+        if (count === 0) {
+          res.render('collection'); // this must be wrong input
+        } else {
+          res.render('results', { cardsToDisplay });
+        }
+      })
+      .catch((error) => next(error));
+
+    // console.log(req.body.cardApiId, cards[0].id);
   } catch (error) {
     console.error(error);
   }
 });
+
+// console.log(req.body.cardApiId);
 
 router.post('/add-card', routeGuard, (req, res, next) => {
   const cardName = req.body.cardName;
   const cardImage = req.body.cardImage;
   const cardValue = req.body.cardValue;
   const cardAmount = req.body.cardAmount;
+  const cardApiId = req.body.cardApiId;
   const creator = req.user._id;
   const card = {
     cardName,
     cardImage,
     cardValue,
     cardAmount,
+    cardApiId,
     creator
   };
   Card.create(card)
