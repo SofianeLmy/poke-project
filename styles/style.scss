@@ -1,4 +1,5 @@
-$font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+$font-sans: 'Roboto', sans-serif;
 $grey: hsl(0, 0, 90%);
 
 * {
@@ -16,6 +17,7 @@ body {
   font-family: sans-serif;
   font-family: $font-sans;
   line-height: 2;
+  background-image: url('https://images6.fanpop.com/image/photos/40000000/Pokemon-Background-Designs40-earn-gold-here-40015982-1920-1080.jpg');
 }
 
 a {
@@ -25,6 +27,12 @@ a {
 
 nav {
   display: flex;
+  color: black;
+  font-size: 1.3em;
+  font-weight: bold;
+  // border-bottom-style: solid;
+  // border-bottom-color: black;
+  // border-bottom-width: 0,1px;
   a,
   button {
     padding: 1em 0;
@@ -86,16 +94,59 @@ label {
 
 .left-panel {
   width: 50%;
-  height: 300px;
-  background-color: red;
+  height: 500px;
+  color: white;
   float: left;
+  padding: 10px;
+  display: table;
+
+  .intro-text {
+    font-size: 20px;
+    line-height: 1.5;
+    color: black;
+    display: table-cell;
+    vertical-align: middle;
+  }
 }
 
 .right-panel {
+  border-radius: 20px;
   width: 50%;
-  height: 300px;
-  background-color: blue;
+  height: 500px;
+  background-color: #0075be;
   float: left;
+  padding: 10px;
+  border: solid 2px #2a75bb;
+  color: white;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem 2rem 2rem;
+    position: absolute;
+    color: white;
+  }
+
+  input {
+    padding: 10px 20px;
+    border: 4px solid white;
+    background-color: transparent;
+    color: white;
+
+  }
+
+  .sign-in-btn {
+    border-radius: 10px;
+    border: 1px solid #fb1b1b;
+    background-color: #fb1b1b;
+    color: #ffffff;
+    font-size: 12px;
+
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+  }
 }
 
 .card-container {

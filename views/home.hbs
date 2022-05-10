@@ -1,12 +1,27 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+
 
 <div class="left-panel">
 
+<p class="intro-text">You just found Pokémon cards in the back of a drawer? <br>
+    Or you simply are a Pokémon collector?<br><br>
+    You are at the right place.<br><br>
+    Find out the value of your cards now! </p>
+
 </div>
+
 
 <div class="right-panel">
 
+<h2> Sign in! </h2>
+<h3> Not a member yet? Register now</h3>
+
+<form class="form-holder" action="/authentication/sign-in" method="POST">
+  <label for="input-email">Email</label>
+  <input type="email" name="email" placeholder="Your Email" />
+  <label for="input-password">Password</label>
+  <input type="password" name="password" placeholder="A Strong Password" />
+  <button class="sign-in-btn">Sign In</button>
+</form>
 </div>
 
 
