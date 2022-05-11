@@ -1,27 +1,37 @@
-
-
 <div class="left-panel">
 
-<p class="intro-text">You just found Pokémon cards in the back of a drawer? <br>
-    Or you simply are a Pokémon collector?<br><br>
-    You are at the right place.<br><br>
-    Find out the value of your cards now! </p>
+  <p class="intro-text">You just found Pokémon cards in the back of a drawer?
+    <br />
+    Or you simply are a Pokémon collector?<br /><br />
+    You are at the right place.<br /><br />
+    Find out the value of your cards now!
+  </p>
 
 </div>
-
 
 <div class="right-panel">
 
-<h2> Sign in! </h2>
-<h3> Not a member yet? Register now</h3>
+  <div class="intro-text-sign-in">
+    <h1>Sign in!</h1>
+    <h2>Not a member yet?
+      <a href="/authentication/sign-up">Register now.</a></h2>
+  </div>
 
-<form class="form-holder" action="/authentication/sign-in" method="POST">
-  <label for="input-email">Email</label>
-  <input type="email" name="email" placeholder="Your Email" />
-  <label for="input-password">Password</label>
-  <input type="password" name="password" placeholder="A Strong Password" />
-  <button class="sign-in-btn">Sign In</button>
-</form>
+    <form class="sign-in-form" action="/authentication/sign-in" method="POST">
+      <label for="input-email">Email</label>
+      <input type="email" name="email" placeholder="Your Email" />
+      <label for="input-password">Password</label>
+      <input type="password" name="password" placeholder="A Strong Password" />
+      <button class="sign-in-btn">Sign In</button>
+    </form>
+
 </div>
 
+<footer>
+
+<p>
+  Brought to you by Eric and Sofiane | Web-Dev bootcamp | Ironhack Jan 22. <br><br>
+  With the helpful collaboration of Stefano, Ana, José and Alberto.
+  </p>
+</footer>
 
