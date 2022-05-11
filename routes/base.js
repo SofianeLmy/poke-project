@@ -91,16 +91,32 @@ router.post('/collection/:cardId/edit', (req, res, next) => {
   const { cardAmount } = req.body;
 
   Card.findByIdAndUpdate(cardId, { cardAmount }, { new: true })
-    .then(() => res.redirect('/collection')) // go to the details page to see the updates
+    .then(() => res.redirect('/collection'))
     .catch((error) => next(error));
 });
 
 router.get('/collection', routeGuard, (req, res, next) => {
   const userId = req.user._id;
-  Card.find({ creator: userId })
 
+  Card.find({ creator: userId })
     .then((allTheCardsFromDB) => {
-      res.render('collection', { cards: allTheCardsFromDB });
+      const arrayOfValues = allTheCardsFromDB.map((eachElement) =>
+        Number(eachElement.cardValue * eachElement.cardAmount)
+      );
+      const TotalValue = arrayOfValues.reduce((a, b) => a + b, 0);
+      // console.log(TotalValue);
+
+      if (TotalValue === 0) {
+        res.render('collection', {
+          cards: allTheCardsFromDB,
+          TotalValue: 'Add a card to your collection first'
+        });
+      } else {
+        res.render('collection', {
+          cards: allTheCardsFromDB,
+          TotalValue: '$' + TotalValue
+        });
+      }
     })
     .catch((error) => {
       console.log('Error while getting the cards from the DB: ', error);
