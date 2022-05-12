@@ -197,6 +197,7 @@ label {
       width: 100px;
       overflow: hidden;
       text-overflow: ellipsis;
+      display: inline-block;
     }
 
     button {
@@ -235,6 +236,7 @@ label {
       width: 100px;
       overflow: hidden;
       text-overflow: ellipsis;
+      display: inline-block;
     }
 
     .update {
@@ -272,7 +274,7 @@ label {
 footer {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  // width: 100%;
   padding-top: 50px;
   line-height: 1;
   align-content: center;

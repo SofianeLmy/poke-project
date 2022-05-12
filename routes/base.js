@@ -103,10 +103,9 @@ router.get('/collection', routeGuard, (req, res, next) => {
       const arrayOfValues = allTheCardsFromDB.map((eachElement) =>
         Number(eachElement.cardValue * eachElement.cardAmount)
       );
-      const TotalValue = arrayOfValues.reduce((a, b) => a + b, 0);
-      // console.log(TotalValue);
+      const TotalValue = arrayOfValues.reduce((a, b) => a + b, 0).toFixed(2);
 
-      if (TotalValue === 0) {
+      if (TotalValue == 0) {
         res.render('collection', {
           cards: allTheCardsFromDB,
           TotalValue: 'Add a card to your collection first'

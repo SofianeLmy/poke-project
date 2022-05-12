@@ -197,6 +197,7 @@ label {
   width: 100px;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: inline-block;
 }
 
 .card-container .card button {
@@ -235,6 +236,7 @@ label {
   width: 100px;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: inline-block;
 }
 
 .collection-container .card .update {
@@ -270,60 +272,9 @@ label {
 footer {
   position: absolute;
   bottom: 0;
-  width: 100%;
   padding-top: 50px;
   line-height: 1;
   align-content: center;
-}
-
-.head .hair .hair-1 {
-  background-color: brown;
-}
-
-.head .hair .hair-2 {
-  background-color: brown;
-}
-
-.head .hair .hair-3 {
-  background-color: grey;
-}
-
-.head .eyes .left-eye .eye-color {
-  background-color: blue;
-}
-
-.head .eyes .right-eye .eye-color {
-  background-color: blue;
-}
-
-.head .mouth .lips {
-  background-color: red;
-}
-
-.head .mouth .teeth .teeth-1 {
-  background-color: lightyellow;
-}
-
-.head .mouth .teeth .teeth-2 {
-  background-color: lightyellow;
-}
-
-.head .mouth .teeth .teeth-3 {
-  background-color: lightyellow;
-}
-
-.head .mouth .teeth .teeth-4 {
-  background-color: lightyellow;
-}
-
-.legs .left-leg {
-  height: 1000px;
-  width: 100px;
-}
-
-.legs .right-leg {
-  height: 1000px;
-  width: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */
