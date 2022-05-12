@@ -10,28 +10,28 @@
 </div>
 
 <div class="right-panel">
+  <h1>Sign in!</h1>
+  {{!-- <h6>You are few clicks away..</h6> --}}
+  <form class="text-field" action="/authentication/sign-in" method="POST">
 
-  <div class="intro-text-sign-in">
-    <h1>Sign in!</h1>
-    <h2>Not a member yet?
-      <a href="/authentication/sign-up">Register now.</a></h2>
-  </div>
-
-    <form class="sign-in-form" action="/authentication/sign-in" method="POST">
       <label for="input-email">Email</label>
       <input type="email" name="email" placeholder="Your Email" />
+
       <label for="input-password">Password</label>
-      <input type="password" name="password" placeholder="A Strong Password" />
-      <button class="sign-in-btn">Sign In</button>
-    </form>
+      <input type="password" name="password" placeholder="Make it Strong" />
+
+    <button class="sign-in-btn">Sign In</button>
+  </form>
+
+   <div class="register-link"> Not a member yet? <a href=""/authentication/sign-in"">Register now</a></div>
 
 </div>
 
 <footer>
 
-<p>
-  Brought to you by Eric and Sofiane | Web-Dev bootcamp | Ironhack Jan 22. <br><br>
-  With the helpful collaboration of Stefano, Ana, José and Alberto.
+  <p>
+    Brought to you by Eric and Sofiane | Web-Dev bootcamp | Ironhack Jan 22.
+    <br /><br />
+    With the helpful collaboration of Stefano, Ana, José and Alberto.
   </p>
 </footer>
-
