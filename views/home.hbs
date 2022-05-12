@@ -3,7 +3,8 @@
   <p class="intro-text">You just found Pokémon cards in the back of a drawer?
     <br />
     Or you simply are a Pokémon collector?<br /><br />
-    You are at the right place.<br /><br />
+    <span>You are at the right place.</span>
+    <br /><br />
     Find out the value of your cards now!
   </p>
 
@@ -11,14 +12,15 @@
 
 <div class="right-panel">
   <h1>Sign in!</h1>
-  {{! <h6>You are few clicks away..</h6> }}
+  <h4>You are just a few clicks away...</h4>
+
   <form class="text-field" action="/authentication/sign-in" method="POST">
 
-    <label for="input-email">Email</label>
-    <input type="email" name="email" placeholder="Your Email" />
+    {{! <label for="input-email">Email</label> }}
+    <input type="email" name="email" placeholder="Email" />
 
-    <label for="input-password">Password</label>
-    <input type="password" name="password" placeholder="Make it Strong" />
+    {{! <label for="input-password">Password</label> }}
+    <input type="password" name="password" placeholder="Password" />
 
     <button class="sign-in-btn">Sign In</button>
   </form>
@@ -33,7 +35,7 @@
 <footer>
 
   <p>
-    Brought to you by Eric and Sofiane | Web-Dev bootcamp | Ironhack Jan 22.
+    Brought to you by Eric and Sofiane | Web-Dev Bootcamp | Ironhack Jan-22.
     <br /><br />
     With the helpful collaboration of Stefano, Ana, José and Alberto.
   </p>

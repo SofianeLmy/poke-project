@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
 $font-sans: 'Roboto', sans-serif;
 $grey: hsl(0, 0, 90%);
 
@@ -117,6 +118,12 @@ label {
     color: black;
     display: table-cell;
     vertical-align: middle;
+
+    span{
+      color:#0075be;
+      font-family: 'Pokemon Solid', sans-serif; 
+      font-size: 30px;                                   
+    }
   }
 }
 
@@ -176,8 +183,16 @@ label {
     margin: 10px;
   }
 
+  .not-a-member{
+    font-style:italic;
+    margin-top: 0px;
+    text-align: center;
+  }
+
   .register-link {
-    color: red;
+    color: white;
+    // text-decoration: underline overline #fb1b1b;
+    border-bottom: 3px solid #fb1b1b;
   }
 }
 
@@ -275,7 +290,10 @@ footer {
   position: absolute;
   bottom: 0;
   // width: 100%;
-  padding-top: 50px;
+  padding: 200px 200px 0 200px;
+  height:50px;
   line-height: 1;
-  align-content: center;
+  text-align: center;
+  font-family: "cardo";
+  font-style: italic;
 }
