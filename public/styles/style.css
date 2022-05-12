@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-@import url("http://fonts.cdnfonts.com/css/pokemon-solid");
+@import url("https//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon");
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -121,7 +121,7 @@ label {
 
 .left-panel .intro-text span {
   color: #0075be;
-  font-family: 'Pokemon Solid', sans-serif;
+  font-family: 'Pokemon';
   font-size: 30px;
 }
 
@@ -286,18 +286,12 @@ label {
 footer {
   position: absolute;
   bottom: 0;
-<<<<<<< HEAD
-  padding-top: 50px;
-  line-height: 1;
-  align-content: center;
-=======
   padding: 200px 200px 0 200px;
   height: 50px;
   line-height: 1;
   text-align: center;
-  font-family: "cardo";
+  font-family: 'cardo';
   font-style: italic;
->>>>>>> 149e8c3985eb5fa842bea7074cc3d405905fd316
 }
 
 /*# sourceMappingURL=style.css.map */
