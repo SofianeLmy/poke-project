@@ -122,7 +122,7 @@ label {
     span{
       color:#0075be;
       font-family: 'Pokemon Solid', sans-serif; 
-      font-size: 50px;                                   
+      font-size: 30px;                                   
     }
   }
 }
@@ -148,7 +148,7 @@ label {
       background-color: #0075be;
       color: white;
       border: 5px solid white;
-      
+
       &::placeholder {
         /* Chrome, Firefox, Opera, Safari 10.1+ */
         color: white;
@@ -169,7 +169,6 @@ label {
     label {
       color: white;
       font-style: bold;
-      
     }
   }
 
