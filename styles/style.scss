@@ -17,9 +17,12 @@ body {
   font-family: sans-serif;
   font-family: $font-sans;
   line-height: 2;
-  background-image: url('https://images6.fanpop.com/image/photos/40000000/Pokemon-Background-Designs40-earn-gold-here-40015982-1920-1080.jpg');
+  background-image: url('https://wallpaper.dog/large/5567668.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 1000px;
+  background-position-x: right;
+  background-position-y: bottom;
+  background-color: #ffea39;
 }
 
 a {
@@ -32,6 +35,7 @@ nav {
   color: black;
   font-size: 1.3em;
   font-weight: bold;
+
   // border-bottom-style: solid;
   // border-bottom-color: black;
   // border-bottom-width: 0,1px;
@@ -122,40 +126,42 @@ label {
   height: 450px;
   background-color: #0075be;
   float: left;
-  padding: 10px;
+  padding: 0px 15px;
   border: solid 2px #2a75bb;
   color: white;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
   position: relative;
 
   h1 {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 0;
   }
 
-  h2 {
-    text-align: center;
-    font-size: 1rem;
-    font-style: italic;
-    a {
-      text-decoration: underline;
-      text-decoration-color: #fb1b1b;
-    }
-  }
-
-  .sign-in-form {
-    display: flex;
-    flex-direction: column;
-
+  .text-field {
     input {
-      padding: 10px 1px 10px;
-      border: 4px solid white;
-      margin: 0 1.5rem;
-      background-color: transparent;
+      background-color: #0075be;
       color: white;
+      border: 5px solid white;
+
+      &::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: white;
+        opacity: 1; /* Firefox */
+      }
+
+      &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: white;
+      }
+
+      &::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: white;
+      }
+    }
+
+    label {
+      color: white;
+      font-style: bold;
     }
   }
 
@@ -168,6 +174,10 @@ label {
     letter-spacing: 1px;
     text-transform: uppercase;
     margin: 10px;
+  }
+
+  .register-link {
+    color: red;
   }
 }
 
@@ -266,59 +276,4 @@ footer {
   padding-top: 50px;
   line-height: 1;
   align-content: center;
-}
-
-.head {
-  .hair {
-    .hair-1 {
-      background-color: brown;
-    }
-    .hair-2 {
-      background-color: brown;
-    }
-    .hair-3 {
-      background-color: grey;
-    }
-  }
-  .eyes {
-    .left-eye {
-      .eye-color {
-        background-color: blue;
-      }
-    }
-    .right-eye {
-      .eye-color {
-        background-color: blue;
-      }
-    }
-  }
-  .mouth {
-    .lips {
-      background-color: red;
-    }
-    .teeth {
-      .teeth-1 {
-        background-color: lightyellow;
-      }
-      .teeth-2 {
-        background-color: lightyellow;
-      }
-      .teeth-3 {
-        background-color: lightyellow;
-      }
-      .teeth-4 {
-        background-color: lightyellow;
-      }
-    }
-  }
-}
-.legs {
-  .left-leg {
-    height: 1000px;
-    width: 100px;
-  }
-  .right-leg {
-    height: 1000px;
-    width: 100px;
-  }
 }
