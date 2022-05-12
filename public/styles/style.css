@@ -171,14 +171,12 @@ label {
 }
 
 .right-panel .sign-in-btn {
-  border-radius: 10px;
   border: 1px solid #fb1b1b;
   background-color: #fb1b1b;
   color: white;
   font-size: 12px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin: 10px;
 }
 
 .right-panel .not-a-member {
@@ -283,21 +281,200 @@ label {
   display: none;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-<<<<<<< HEAD
-  padding-top: 50px;
-  line-height: 1;
-  align-content: center;
-=======
-  padding: 200px 200px 0 200px;
-  height: 50px;
-  line-height: 1;
+.sign-up button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.sign-up-container {
+  border-radius: 10px;
+  width: 100%;
+  height: 710px;
+  background-color: #0075be;
+  float: left;
+  padding: 0px 15px;
+  border: solid 2px #2a75bb;
+  color: white;
+  position: relative;
+}
+
+.sign-up-container h1 {
   text-align: center;
-  font-family: "cardo";
-  font-style: italic;
->>>>>>> 149e8c3985eb5fa842bea7074cc3d405905fd316
+  font-size: 2rem;
+}
+
+.sign-up-container .text-field input {
+  background-color: #0075be;
+  color: white;
+  border: 5px solid white;
+}
+
+.sign-up-container .text-field input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
+.sign-up-container .text-field input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+
+.sign-up-container .text-field input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+}
+
+.sign-up-container .text-field select {
+  background-color: #0075be;
+  color: white;
+  border: 5px solid white;
+}
+
+.sign-up-container .text-field select::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
+.sign-up-container .text-field select:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+
+.sign-up-container .text-field select::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+}
+
+.sign-up-container .text-field label {
+  color: white;
+  font-style: bold;
+}
+
+.sign-up-container .sign-in-btn {
+  border: 1px solid #fb1b1b;
+  background-color: #fb1b1b;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.search-container {
+  border-radius: 10px;
+  width: 100%;
+  color: white;
+  position: relative;
+}
+
+.search-container h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.search-container .text-field {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.search-container .text-field .left-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.search-container .text-field .right-container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.search-container .text-field input {
+  background-color: #0075be;
+  color: white;
+  border: 5px solid white;
+}
+
+.search-container .text-field input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
+.search-container .text-field input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+
+.search-container .text-field input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+}
+
+.search-container .text-field select {
+  background-color: #0075be;
+  color: white;
+  border: 5px solid white;
+}
+
+.search-container .text-field select::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
+.search-container .text-field select:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+
+.search-container .text-field select::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+}
+
+.search-container .text-field label {
+  color: white;
+  font-style: bold;
+}
+
+.search-container .sign-in-btn {
+  border: 1px solid #fb1b1b;
+  background-color: #fb1b1b;
+  color: white;
+  border: 5px solid white;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 600px) {
+  .collection-container .card {
+    position: relative;
+    width: calc(50% - 10px);
+    background-color: #f4f4f4;
+    border: solid 1px lightgray;
+    padding: 10px;
+    margin: 5px;
+  }
+  .card-container .card {
+    position: relative;
+    width: calc(50% - 10px);
+    background-color: #f4f4f4;
+    border: solid 1px lightgray;
+    padding: 10px;
+    margin: 5px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
