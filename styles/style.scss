@@ -20,11 +20,7 @@ body {
   background-image: url('https://images6.fanpop.com/image/photos/40000000/Pokemon-Background-Designs40-earn-gold-here-40015982-1920-1080.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-
-  
 }
-
-
 
 a {
   color: inherit;
@@ -153,14 +149,13 @@ label {
   .sign-in-form {
     display: flex;
     flex-direction: column;
-   
-    
+
     input {
       padding: 10px 1px 10px;
       border: 4px solid white;
       margin: 0 1.5rem;
       background-color: transparent;
-      color:white;
+      color: white;
     }
   }
 
@@ -172,7 +167,7 @@ label {
     font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin:10px;
+    margin: 10px;
   }
 }
 
@@ -265,10 +260,65 @@ label {
 }
 
 footer {
-  position:absolute;
-  bottom:0;
-  width:100%;
-  padding-top:50px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 50px;
   line-height: 1;
   align-content: center;
+}
+
+.head {
+  .hair {
+    .hair-1 {
+      background-color: brown;
+    }
+    .hair-2 {
+      background-color: brown;
+    }
+    .hair-3 {
+      background-color: grey;
+    }
   }
+  .eyes {
+    .left-eye {
+      .eye-color {
+        background-color: blue;
+      }
+    }
+    .right-eye {
+      .eye-color {
+        background-color: blue;
+      }
+    }
+  }
+  .mouth {
+    .lips {
+      background-color: red;
+    }
+    .teeth {
+      .teeth-1 {
+        background-color: lightyellow;
+      }
+      .teeth-2 {
+        background-color: lightyellow;
+      }
+      .teeth-3 {
+        background-color: lightyellow;
+      }
+      .teeth-4 {
+        background-color: lightyellow;
+      }
+    }
+  }
+}
+.legs {
+  .left-leg {
+    height: 1000px;
+    width: 100px;
+  }
+  .right-leg {
+    height: 1000px;
+    width: 100px;
+  }
+}
