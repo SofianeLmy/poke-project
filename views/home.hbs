@@ -1,44 +1,46 @@
-<div class="left-panel">
 
-  <p class="intro-text">You just found Pokémon cards in the back of a drawer?
-    <br />
-    Or you simply are a Pokémon collector?<br /><br />
-    <span>You are at the right place.</span>
-    <br /><br />
-    Find out the value of your cards now!
-  </p>
+  <div class="entire-panel">
+  
+  <div class="left-panel">
 
+    <p class="intro-text">You just found Pokémon cards in the back of a drawer?
+      <br />
+      Or you simply are a Pokémon collector?<br /><br />
+      <span>You are at the right place.</span>
+      <br /><br />
+      Find out the value of your cards now!
+    </p>
+
+  </div>
+
+  <div class="right-panel">
+    <h1>Sign in!</h1>
+    <h4>You are just a few clicks away...</h4>
+
+    <form class="text-field" action="/authentication/sign-in" method="POST">
+
+      {{! <label for="input-email">Email</label> }}
+      <input type="email" name="email" placeholder="Email" />
+
+      {{! <label for="input-password">Password</label> }}
+      <input type="password" name="password" placeholder="Password" />
+
+      <button class="sign-in-btn">Sign In</button>
+    </form>
+
+    <form class="sign-up" action="/authentication/sign-up" method="GET">
+      <button>Not a member yet?
+        <span style="text-decoration: underline;">Register now.</span></button>
+      {{! <div class="register-link"> Not a member yet? <a href=""/authentication/sign-in"">Register now</a></div> }}
+    </form>
+
+  </div>
 </div>
 
-<div class="right-panel">
-  <h1>Sign in!</h1>
-  <h4>You are just a few clicks away...</h4>
-
-  <form class="text-field" action="/authentication/sign-in" method="POST">
-
-    {{! <label for="input-email">Email</label> }}
-    <input type="email" name="email" placeholder="Email" />
-
-    {{! <label for="input-password">Password</label> }}
-    <input type="password" name="password" placeholder="Password" />
-
-    <button class="sign-in-btn">Sign In</button>
-  </form>
-
-  <form class="sign-up" action="/authentication/sign-up" method="GET">
-    <button>Not a member yet?
-      <span style="text-decoration: underline;">Register now.</span></button>
-    {{! <div class="register-link"> Not a member yet? <a href=""/authentication/sign-in"">Register now</a></div> }}
-  </form>
-
-</div>
-
-{{! <footer> }}
-{{! <div class="stick-to-bottom-wrapper">
-  <p class="stick-to-bottom">
-    Brought to you by Eric and Sofiane | Web-Dev Bootcamp | Ironhack Jan-22.
+<div class="footer">
+  <p>
+    Brought to you by Eric and Sofiane | Web-Dev Bootcamp | Ironhack Jan-22
     <br /><br />
     With the helpful collaboration of Stefano, Ana, José and Alberto.
   </p>
-</div> }}
-{{! </footer> }}
+</div>

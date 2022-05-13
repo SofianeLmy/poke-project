@@ -5,12 +5,11 @@
 @font-face {
   font-family: 'Pokemon Solid';
   src: url('fonts/PokemonSolidNormal.woff2') format('woff2'),
-      url('fonts/PokemonSolidNormal.woff') format('woff');
+    url('fonts/PokemonSolidNormal.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
 
 $font-sans: 'Roboto', sans-serif;
 $grey: hsl(0, 0, 90%);
@@ -46,7 +45,7 @@ a {
 nav {
   display: flex;
   color: black;
-  font-size: 1.3em;
+  font-size: 1.5em;
   font-weight: bold;
 
   // border-bottom-style: solid;
@@ -193,18 +192,6 @@ label {
     letter-spacing: 1px;
     text-transform: uppercase;
     // margin: 0 10px;
-  }
-
-  .not-a-member {
-    font-style: italic;
-    margin-top: 0px;
-    text-align: center;
-  }
-
-  .register-link {
-    color: white;
-    // text-decoration: underline overline #fb1b1b;
-    border-bottom: 3px solid #fb1b1b;
   }
 }
 
@@ -484,6 +471,16 @@ label {
 }
 
 @media only screen and (max-width: 600px) {
+  nav {
+    padding: 10px;
+  }
+
+  body {
+    background-image: url('https://wallpaper.dog/large/5567668.jpg');
+    background-size: 250px;
+    background-position: right top;
+  }
+
   .collection-container {
     .card {
       position: relative;
@@ -505,29 +502,40 @@ label {
       margin: 5px;
     }
   }
+
+  .entire-panel {
+    display: flex;
+    flex-direction: column;
+
+    .left-panel {
+      width: 100%;
+      height: 400px;
+    }
+
+    .right-panel {
+      width: 100%;
+      // height: 450px;
+      background-color: #0075be;
+      float: left;
+      padding: 0px 15px;
+      border: solid 2px #2a75bb;
+      color: white;
+      position: relative;
+    }
+  }
+  .footer {
+    display: none;
+  }
 }
 
-// footer {
-//   position: absolute;
-//   bottom: 0;
-//   // width: 100%;
-//   padding: 200px 200px 0 200px;
-//   height: 50px;
-//   line-height: 1;
-//   text-align: center;
-//   font-family: 'cardo';
-//   font-style: italic;
-// }
-// .stick-to-bottom-wrapper {
-//   width: 100%;
-//   position: relative;
-//   bottom: 0;
-//   .stick-to-bottom {
-//     // bottom: 0;
-//     width: 100%;
-//     display: inline-block;
-//     text-align: center;
-//     line-height: 1;
-//     font-style: italic;
-//   }
-// }
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 10;
+  width: 100%;
+  color: black;
+  text-align: center;
+  line-height: 1;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+}
