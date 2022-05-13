@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-@import url("https//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon");
+@font-face {
+  font-family: 'Pokemon Solid';
+  src: url("fonts/PokemonSolidNormal.woff2") format("woff2"), url("fonts/PokemonSolidNormal.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -121,7 +128,7 @@ label {
 
 .left-panel .intro-text span {
   color: #0075be;
-  font-family: 'Pokemon';
+  font-family: 'Pokemon Solid';
   font-size: 30px;
 }
 
