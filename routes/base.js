@@ -32,6 +32,10 @@ router.get('/results', async (req, res) => {
     Card.find({ creator: req.user._id })
       .then((cardsFromDB) => {
         console.log(cardsFromDB);
+        const arrayOfValues = cardsFromDB.map((eachElement) =>
+          Number(eachElement.cardValue * eachElement.cardAmount)
+        );
+        const TotalValue = arrayOfValues.reduce((a, b) => a + b, 0).toFixed(2);
         const arrayOfIds = cardsFromDB.map((eachElement) =>
           String(eachElement.cardApiId)
         );
@@ -40,7 +44,10 @@ router.get('/results', async (req, res) => {
         );
         console.log('CARDS', cardsToDisplay);
         if (count === 0) {
-          res.render('collection'); // this must be wrong input
+          res.render('collection', {
+            cards: cardsFromDB,
+            TotalValue: '$' + TotalValue
+          });
         } else {
           res.render('results', { cardsToDisplay });
         }
