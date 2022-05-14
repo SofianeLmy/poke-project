@@ -4,6 +4,7 @@
       <form action="/add-card" method="POST">
 
         <img src="{{images.small}}" alt="Image" />
+        <img class="logo" src="{{set.images.logo}}" alt="Image" />
         <small>${{cardmarket.prices.avg1}}</small>
         <strong class="card-name">{{name}}</strong>
         <input type="text" name="cardName" class="hidden" value="{{name}}" />
@@ -12,6 +13,12 @@
           name="cardValue"
           class="hidden"
           value="{{cardmarket.prices.avg1}}"
+        />
+        <input
+          type="text"
+          name="cardSetLogo"
+          class="hidden"
+          value="{{set.images.logo}}"
         />
         <input
           type="text"

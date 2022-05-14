@@ -471,6 +471,15 @@ label {
 }
 
 @media only screen and (max-width: 600px) {
+  img.logo {
+    position: absolute;
+    top: 220px !important;
+    width: auto;
+    height: 20px;
+    right: 10px !important;
+    left: auto;
+  }
+
   nav {
     padding: 10px;
   }
@@ -538,4 +547,13 @@ label {
   line-height: 1;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-style: italic;
+}
+
+img.logo {
+  position: absolute;
+  top: 194px;
+  width: auto;
+  height: 20px;
+  right: 4px;
+  left: auto;
 }

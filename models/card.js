@@ -23,6 +23,10 @@ const cardSchema = new mongoose.Schema({
     type: String,
     trim: true
   },
+  cardSetLogo: {
+    type: String,
+    trim: true
+  },
   creator: {
     type: mongoose.Types.ObjectId,
     required: true,

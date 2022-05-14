@@ -68,11 +68,13 @@ router.post('/add-card', routeGuard, (req, res, next) => {
   const cardValue = req.body.cardValue;
   const cardAmount = req.body.cardAmount;
   const cardApiId = req.body.cardApiId;
+  const cardSetLogo = req.body.cardSetLogo;
   const creator = req.user._id;
   const card = {
     cardName,
     cardImage,
     cardValue,
+    cardSetLogo,
     cardAmount,
     cardApiId,
     creator
