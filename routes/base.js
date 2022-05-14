@@ -7,7 +7,7 @@ const routeGuard = require('./../middleware/route-guard');
 const Card = require('./../models/card');
 
 router.get('/', (req, res, next) => {
-  res.render('home', { title: 'Hello World!' });
+  res.render('home', { title: 'Poke-Project' });
 });
 
 router.get('/private', routeGuard, (req, res, next) => {
